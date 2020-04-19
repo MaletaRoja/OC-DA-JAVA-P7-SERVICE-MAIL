@@ -24,8 +24,8 @@ public class MailController {
 
 		message.setTo(Constants.USER_EMAIL);
 		message.setSubject("Bibliothèque municipale - relance");
-		message.setText("Bonjour, nous constatons un retard dans vos retour d'emprunts."
-				+ " Merci de bien vouloir restituer les ouvrages empruntés. Cordialement.");
+		message.setText("Bonjour, nous constatons un retard dans vos retour d'emprunts.\n"
+				+ "Merci de bien vouloir restituer les ouvrages empruntés.\nCordialement.");
 
 		// Send Message!
 		this.emailSender.send(message);
