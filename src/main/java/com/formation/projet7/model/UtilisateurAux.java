@@ -1,30 +1,26 @@
 package com.formation.projet7.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-
-public class Utilisateur {
-	
+public class UtilisateurAux {
 	
 	private Integer id;
 	private String nom;
 	private String prenom;
 	private String username;
-	private String password;
-
-	public Utilisateur() {
+	private String role;
+	private String token;
+	
+	public UtilisateurAux() {
 		
 	}
 
-	public Utilisateur(Integer id, String nom, String prenom, String username, String password) {
+	public UtilisateurAux(Integer id, String nom, String prenom, String username, String role, String token) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.username = username;
-		this.password = password;
+		this.role = role;
+		this.token = token;
 	}
 
 	public Integer getId() {
@@ -59,12 +55,20 @@ public class Utilisateur {
 		this.username = username;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getRole() {
+		return role;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
 	}
 
 	
