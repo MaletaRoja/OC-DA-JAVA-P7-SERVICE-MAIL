@@ -138,7 +138,7 @@ public class OcDaJavaP7ServiceMailApplication {
 			 mailController.sendSimpleEmail(email, texte);
 		}
 
-		Thread.sleep(1000L * 60 * 5); // 5 min
+		Thread.sleep(1000L * 60 * 60 * 2); // 2h 
 
 	}
 
