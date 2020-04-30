@@ -19,17 +19,14 @@ public class MailController {
 	public JavaMailSender emailSender;
 
 	
-	public String sendSimpleEmail(String emprunteur, String email, String titre, LocalDateTime fin) {
+	public String sendSimpleEmail(String email, String texte) {
 
 		// Create a Simple MailMessage.
 		SimpleMailMessage message = new SimpleMailMessage();
 
 		message.setTo(email);
-		message.setSubject("Bibliothèque municipale - relance");
-		message.setText("Bonjour M,Mme " + emprunteur +"\n" + "Nous constatons un retard dans vos retour d'emprunts.\n\n"
-				+ "Titre de l'ouvrage emprunté: " + titre +"\n\n"
-				+ "Date de retour dépassée : " + fin + "\n\n"
-				+ "Merci de bien vouloir restituer les ouvrages empruntés.\nCordialement.");
+		message.setSubject(Constants.OBJET);
+		message.setText(texte);
 
 		// Send Message!
 		this.emailSender.send(message);
