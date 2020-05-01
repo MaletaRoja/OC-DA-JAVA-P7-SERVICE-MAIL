@@ -1,11 +1,5 @@
 package com.formation.projet7;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,9 +11,6 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import com.formation.projet7.Constants.Constants;
 import com.formation.projet7.controller.MailController;
-import com.formation.projet7.model.EmpruntAuxMail;
-import com.formation.projet7.model.Login;
-import com.formation.projet7.model.Relance;
 import com.formation.projet7.proxy.MicroServiceBibliotheque;
 import com.formation.projet7.service.EmpruntService;
 import com.formation.projet7.service.UserConnexion;
