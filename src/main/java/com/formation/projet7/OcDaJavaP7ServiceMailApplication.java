@@ -73,6 +73,7 @@ public class OcDaJavaP7ServiceMailApplication {
 				relance.setEmprunteur(emprunteur);
 				relance.setFin(fin);
 				relance.setTitre(titre);
+				
 				relances.add(relance);
 				emprunteurs.put(email, relances);
 
@@ -97,6 +98,9 @@ public class OcDaJavaP7ServiceMailApplication {
 		String email = null;
 		for (List<Relance> relances : emprunteurs.values()) {
 
+			titres = new ArrayList<String>();
+			dates = new ArrayList<LocalDateTime>();
+			
 			for (Relance relance : relances) {
 				
 				destinataire = relance.getEmprunteur();
@@ -136,6 +140,9 @@ public class OcDaJavaP7ServiceMailApplication {
 					
 		
 			 mailController.sendSimpleEmail(email, texte);
+			 texte = "";
+			 listeDates = "";
+			 listeTitres = "";
 		}
 
 		Thread.sleep(1000L * 60 * 60 * 2); // 2h 
