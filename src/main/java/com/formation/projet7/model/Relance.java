@@ -7,14 +7,14 @@ public class Relance {
 	private String emprunteur;
 	private String email;
 	private String titre;
-	private LocalDateTime fin;
+	private String fin;
 	
 	public Relance() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Relance(String emprunteur, String email, String titre, LocalDateTime fin) {
+	public Relance(String emprunteur, String email, String titre, String fin) {
 		super();
 		this.emprunteur = emprunteur;
 		this.email = email;
@@ -46,13 +46,13 @@ public class Relance {
 		this.titre = titre;
 	}
 
-	public LocalDateTime getFin() {
+	public String getFin() {
 		return fin;
 	}
 
-	public void setFin(LocalDateTime fin) {
+	public void setFin(String fin) {
 		this.fin = fin;
 	}
-	
 
+	
 }

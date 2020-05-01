@@ -1,6 +1,7 @@
 package com.formation.projet7.service;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -41,6 +42,9 @@ public class EmpruntService {
 		System.out.println("Nbre d'emprunts actifs: " + empruntsActifs.size());
 
 		HashMap<String, List<Relance>> emprunteurs = new HashMap<String, List<Relance>>();
+		
+	//	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
 		for (EmpruntAuxMail em : empruntsActifs) {
 
@@ -49,8 +53,9 @@ public class EmpruntService {
 			String emprunteur = em.getEmprunteur();
 			String email = em.getEmail(); // clé
 			String titre = em.getTitre();
-			LocalDateTime fin = em.getFin();
-
+			LocalDateTime dateFin = em.getFin();
+			String fin = dateFin.format(formatter);
+			
 			Boolean key = emprunteurs.containsKey(email);
 			if (!key) {
 
@@ -81,19 +86,19 @@ public class EmpruntService {
 		}
 		
 		List<String> titres = new ArrayList<String>();
-		List<LocalDateTime> dates = new ArrayList<LocalDateTime>();
+		List<String> dates = new ArrayList<String>();
 		String destinataire = null;
 		String email = null;
 		for (List<Relance> relances : emprunteurs.values()) {
 
 			titres = new ArrayList<String>();
-			dates = new ArrayList<LocalDateTime>();
+			dates = new ArrayList<String>();
 			
 			for (Relance relance : relances) {
 				
 				destinataire = relance.getEmprunteur();
 				email = relance.getEmail();
-				LocalDateTime fin = relance.getFin();
+				String fin = relance.getFin();
 				String titre = relance.getTitre();
 				titres.add(titre);
 				dates.add(fin);
@@ -109,7 +114,7 @@ public class EmpruntService {
 			
 			String listeDates = "";
 			
-			for (LocalDateTime date : dates) {
+			for (String date : dates) {
 				
 				listeDates = listeDates + date.toString() + "\n";
 			}
