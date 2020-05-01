@@ -12,5 +12,7 @@ public class Constants {
     public static final String USER_EMAIL = "kintela@hotmail.fr";
     
     public static final String OBJET = "Bibliothèque municipale - relance";
+    
+    public static final long HEURES = 2;
 
 }
