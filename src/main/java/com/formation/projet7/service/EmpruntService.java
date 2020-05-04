@@ -43,12 +43,9 @@ public class EmpruntService {
 
 		HashMap<String, List<Relance>> emprunteurs = new HashMap<String, List<Relance>>();
 		
-	//	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
 		for (EmpruntAuxMail em : empruntsActifs) {
-
-			// System.out.println(em.getEmprunteur() + ">>>>" + em.getTitre());
 
 			String emprunteur = em.getEmprunteur();
 			String email = em.getEmail(); // clé
@@ -133,13 +130,7 @@ public class EmpruntService {
 			String texte = "Bonjour M,Mme " + destinataire + "\n\n" 
 					+ "Nous constatons un retard dans la restitition de vos derniers emprunts\n" 
 					+ "Nous vous prions de bien vouloir restituer les ouvrages suivants:\n\n"
-					/*
-					+ listeTitres + "\n"
-					+ "\n"+
-					+ "dont les dates de restitution sont:\n\n"
-					+ listeDates + "\n"
 					
-					*/
 					+ titresAvecDate + "\n"
 					+ "\n"
 					+ "Cordiales salutations\n"
@@ -152,7 +143,6 @@ public class EmpruntService {
 			 listeDates = "";
 			 listeTitres = "";
 		}
-		
 		
 	}
 

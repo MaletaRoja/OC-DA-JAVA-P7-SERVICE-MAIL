@@ -29,13 +29,7 @@ public class UserConnexion {
 		UtilisateurAux userAux = userBody.getBody();
 		System.out.println("Token: " + userAux.getToken() );
 		System.out.println("Nom de l'utilisateur récupéré: " + userAux.getNom());
-		/*
-		Utilisateur utilisateur = new Utilisateur();
-		utilisateur.setId(userAux.getId());
-		utilisateur.setNom(userAux.getNom());
-		utilisateur.setPrenom(userAux.getPrenom());
-		utilisateur.setUsername(userAux.getUsername());
-		*/
+		
 		
 		String token = "Bearer " + userAux.getToken();
 		System.out.println("Chaine token: " + token);
