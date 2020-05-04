@@ -7,6 +7,7 @@ public class Constants {
  
     // password compte expéditeur
     public static final String BIBLIO_PASSWORD = "Zaragoza1971";
+    //public static final String BIBLIO_PASSWORD = "bkppkhnxxpmhlinj";
  
     //  adresse destinataire (pour test)
     public static final String USER_EMAIL = "kintela@hotmail.fr";
