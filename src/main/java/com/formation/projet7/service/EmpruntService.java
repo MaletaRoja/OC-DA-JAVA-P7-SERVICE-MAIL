@@ -119,13 +119,25 @@ public class EmpruntService {
 				listeDates = listeDates + date.toString() + "\n";
 			}
 			
+			String titresAvecDate = "";
+			int i =0;
+			for (String titre : titres) {
+				
+				titresAvecDate = titre + "date de fin de prêt: " + dates.get(i) +"\n";
+				i++;
+			}
+			
 			String texte = "Bonjour M,Mme " + destinataire + "\n\n" 
 					+ "Nous constatons un retard dans la restitition de vos derniers emprunts\n" 
 					+ "Nous vous prions de bien vouloir restituer les ouvrages suivants:\n\n"
+					/*
 					+ listeTitres + "\n"
 					+ "\n"
 					+ "dont les dates de restitution sont:\n\n"
 					+ listeDates + "\n"
+					
+					*/
+					+ titresAvecDate + "\n"
 					+ "\n"
 					+ "Cordiales salutations\n"
 					+ "\n"
