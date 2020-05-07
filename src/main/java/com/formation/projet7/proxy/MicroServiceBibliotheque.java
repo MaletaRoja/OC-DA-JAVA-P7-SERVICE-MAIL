@@ -13,7 +13,7 @@ import com.formation.projet7.model.EmpruntAuxMail;
 import com.formation.projet7.model.Login;
 import com.formation.projet7.model.UtilisateurAux;
 
-@FeignClient(name="biblio-service", url="localhost:8081/biblio")
+@FeignClient(name="biblio-service", url="localhost:8080/biblio-service")
 public interface MicroServiceBibliotheque {
 	
 	@GetMapping("/ouvrage/emprunts/mail")
@@ -22,5 +22,4 @@ public interface MicroServiceBibliotheque {
 	@PostMapping("connexion/")
 	public ResponseEntity<UtilisateurAux> generate(@RequestBody final Login login);
 	
-
 }
