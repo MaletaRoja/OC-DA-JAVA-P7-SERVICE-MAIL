@@ -3,10 +3,10 @@ package com.formation.projet7.Constants;
 public class Constants {
 
 	// adresse du compte expéditeur:  
-    public static final String BIBLIO_EMAIL = "kintelalpz@gmail.com";
+    public static final String BIBLIO_EMAIL = "mlopezg0671@gmail.com";
  
     // password compte expéditeur
-    public static final String BIBLIO_PASSWORD = "bkppkhnxxpmhlinj";
+    public static final String BIBLIO_PASSWORD = "Zaragoza1971";
  
     //  adresse destinataire (pour test)
     public static final String USER_EMAIL = "kintela@hotmail.fr";
